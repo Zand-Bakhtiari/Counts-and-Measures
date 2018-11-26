@@ -30,7 +30,7 @@ for f in fcs:
         count.append(int(arcpy.GetCount_management("mytableview").getOutput(0)))
         #print count
     except RuntimeError:
-        count.append("Life Cycle Status or Ownerhsip Status fields not found.")
+        count.append("Specified Query not found")
 #%%
 # Create a .csv workbook that has 2 columns; one for the layer name and one for the count
 csvname = arcpy.GetParameterAsText(1)
